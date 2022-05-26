@@ -50,7 +50,7 @@ function App() {
             {data.weather ? <img alt="icon" src={`https://openweathermap.org/img/w/${data.weather[0].icon}.png`}/> : null}
           </div>
           <div>
-            {day}, {month}, {date}, {year}
+            {day}, {month} {date}, {year}
           </div>
         </div>
 
