@@ -47,7 +47,7 @@ function App() {
             {data.weather ? <p>{data.weather[0].main}</p> : null}
           </div>
           <div className="icon">
-            {data.weather ? <img src={`http://openweathermap.org/img/w/${data.weather[0].icon}.png`}/> : null}
+            {data.weather ? <img src={`https://openweathermap.org/img/w/${data.weather[0].icon}.png`}/> : null}
           </div>
           <div>
             {day}, {month}, {date}, {year}
