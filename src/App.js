@@ -9,6 +9,8 @@ function App() {
   const [location, setLocation] = useState('')
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=5c5897c87d6b36fdeb363f8f1b307eeb`
+
+
   const searchLocation = (event) => {
     if(event.key === 'Enter') {
       axios.get(url).then((response) => {
@@ -17,6 +19,8 @@ function App() {
       })
     }
   }
+
+  
 
   let d = new Date();
   let date = d.getDate();
@@ -33,6 +37,7 @@ function App() {
         onKeyPress={searchLocation}
         placeholder='Enter Location' 
         type="text" />
+        <p className="footer-text">image source: Unsplash</p>
       </div>
 
       <div className="container">
@@ -54,8 +59,6 @@ function App() {
           </div>
         </div>
 
-
-
         {data.name !== undefined &&
           <div className="bottom">
             <div className="feels">
@@ -72,8 +75,6 @@ function App() {
             </div>
           </div> 
         }
-       
-
       </div>
     </div>
   );
